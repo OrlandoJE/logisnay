@@ -1,0 +1,751 @@
+/* Archivo General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    color: #3a3a3a;
+}
+
+hr {
+    margin: auto;
+    background-color: #949494;
+    border: none;
+    height: 1px;
+
+}
+
+.hr {
+    margin: auto;
+    background-color: #949494;
+    height: 1px;
+    width: 100%;
+    transition: 0.5s ease width;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #22377d;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    color: #3a3a3a;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #3a3a3a;
+}
+
+/* Animnaciones del JS */
+.navbar.scroll-shrink {
+    height: 4rem;
+    /* Cambia la altura de la barra de navegación */
+    background-color: #fff;
+}
+
+.hr.scroll-shrink {
+    width: 85%;
+}
+
+* {
+    opacity: 0;
+    /* Elemento invisible al principio */
+    transition: opacity 0.5s ease-in;
+    /* Transición de opacidad para suavizar la aparición/desaparición */
+    outline: none;
+    /* Elimina el borde al hacer click */
+}
+
+/* Barra de navegacion */
+header {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+    transition: 0.3s ease-out;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 12%;
+    align-items: center;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #208cf2;
+}
+
+header img {
+    width: 25vb;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-left: 2.7vw;
+}
+
+.boton-contactanos {
+    background-color: #0B65BA;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: #0B65BA 2px solid;
+}
+
+.boton-contactanos:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.barras-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Menu desplegable */
+.menuDesplegable {
+    position: fixed;
+    top: 0rem;
+    right: -80vw;
+    /* Initially off-screen */
+    width: 80vw;
+    /* Adjust the width as needed */
+    height: 100%;
+    background-color: #fff;
+    /* Background color for the menu */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease-in-out;
+    /* Transition effect */
+    z-index: 998;
+    /* Ensure the menu is on top of other elements */
+}
+
+.menuDesplegable.menu-open {
+    right: 0;
+    /* Show the menu when menu-open class is applied */
+}
+
+.menuDesplegable ul {
+    list-style-type: none;
+    padding: 10%;
+}
+
+.menuDesplegable li {
+    margin: 15% 0;
+}
+
+.menuDesplegable a {
+    font-size: 1.8rem;
+}
+
+.menuDesplegable a:hover {
+    color: #208cf2;
+}
+
+.menuDesplegable .boton-contactanos {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: #22377d;
+}
+
+/* Estilo para el botón de cerrar el menú desplegable */
+.close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Imagen Inicio */
+.hero {
+    background-image: url(Recursos/Imagenes/inicio.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-color: rgb(110, 199, 54);
+    margin: auto;
+    overflow: visible;
+    position: relative;
+}
+
+.hero a {
+    position: absolute;
+    bottom: 0;
+}
+
+.frase {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    padding: 3vh 0;
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 3%;
+}
+
+.frase .titulo {
+    margin-left: 20%;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    width: 45%;
+    height: 100%;
+    text-align: right;
+}
+
+.frase .texto {
+    margin-right: 20%;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 55%;
+}
+
+#agenda {
+    background-color: #f4f4f4;
+    padding: 5rem;
+}
+
+#agenda .contenedor {
+    background-color: #fff;
+    margin: auto;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    column-gap: 2vw;
+    padding: 2rem;
+}
+#agenda img {
+    width: 500px;
+    height: auto%;
+}
+
+/* Quienes Somos */
+#quienesSomos {
+    margin: auto;
+    padding: 10vh 0;
+}
+
+#quienesSomos h1 {
+    margin-bottom: 5vh;
+}
+
+#quienesSomos .contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 0 10vb;
+    column-gap: 5vb;
+}
+
+#quienesSomos .img {
+    width: 25dvw;
+    height: 25dvw;
+    background-color: #0B65BA;
+    border-radius: 40px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#quienesSomos .texto {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#quienesSomos h2, p {
+    margin: 1% 10%;
+    color: #4067b3;
+}
+
+#quienesSomos p {
+    margin-bottom: 5%;
+    color: #3a3a3a;
+}
+
+/* Misión */
+#misionYvision {
+    display: flex;
+    margin: auto;
+    padding: 15vh 15vw;
+    background-color: #f4f4f4;
+}
+
+#misionYvision h1 {
+    margin: auto;
+    text-align: left;
+    ;
+
+}
+
+/* Valores */
+#valores {
+
+    padding: 1vh 0;
+    margin: auto;
+}
+
+#valores .iconos {
+    height: 150px;
+    align-items: center;
+}
+
+.cont-valores {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0 20vw;
+}
+
+.cont-valores .valores {
+    display: flex;
+    justify-content: space-around;
+}
+
+.valores .valor {
+    width: 200px;
+    height: 250px;
+    margin: 4vh 0;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: default;
+    row-gap: 20px;
+}
+
+.valor span {
+    font-size: 1.2rem;
+    color: #3a3a3a;
+}
+
+.valor #icono {
+    font-size: 4rem
+}
+
+/* Footer */
+footer .contenedor {
+    display: flex;
+    margin: 2vh 4vw;
+    justify-content: space-around;
+    column-gap: 2vw;
+}
+
+footer .img {
+    height: 100%;
+    width: 30%;
+    text-align: center;
+}
+
+footer img {
+    width: 20vw;
+}
+
+/* Empieza preguntas frecuentes */
+footer .pf {
+    width: 30%;
+}
+
+footer .pf h4 {
+    text-decoration: none;
+    color: #3a3a3a;
+    margin: 0;
+}
+
+footer .pf ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .pf li {
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    padding: 5% 7%;
+    margin: 5% 0;
+    color: #3a3a3a;
+}
+
+footer .pf .pregunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer .pf .respuesta {
+    text-align: left;
+    margin: 1vh 0;
+    display: none;
+}
+
+footer .pf li.active .respuesta {
+    display: block;
+}
+
+footer .pf li i {
+    transition: transform 0.3s ease-in-out;
+    /* Agrega una transición para la rotación */
+}
+
+footer .pf li.active i {
+    transform: rotate(-180deg);
+}
+
+/* Empieza empresa */
+footer .empresa {
+    width: 30%;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .copy {
+    text-align: center;
+    font-family: 'Calibri', sans-serif;
+}
+
+/* Responsive */
+@media screen and (max-width: 1560px) {
+    .hero .frase .titulo {
+        margin-left: 20%;
+        width: 75%;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    header {
+        width: 100vw;
+    }
+
+    nav {
+        margin: 0 5dvw;
+    }
+
+    header a {
+        font-size: 1.2rem;
+    }
+
+    .hero .frase {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero .frase .titulo {
+        width: 90vw;
+        margin: 0 5.5vw;
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .hero .frase .texto {
+        margin: 0 5.5vw;
+        font-size: 1.5rem;
+    }
+
+    #quienesSomos .contenedor {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #quienesSomos .img {
+        width: 50dvw;
+        height: 50dvw;
+        margin: 4vh 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    header {
+        height: 10vh;
+        width: 100%;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    nav {
+        margin: 0 5dvw;
+    }
+
+    .hr.scroll-shrink {
+        margin: 0
+    }
+
+    .barras-menu {
+        display: block;
+    }
+
+    .hero .frase {
+        margin: auto;
+        position: absolute;
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        padding: 2.5vh 0;
+    }
+
+    .hero .frase .titulo {
+        width: 90%;
+        height: auto;
+        margin: 0 3.5vw;
+        font-size: 2rem;
+    }
+
+    .hero .frase .texto {
+        width: 80%;
+        margin: 1vh 3.5vw;
+        font-size: 1.2rem;
+    }
+
+    #quienesSomos .img {
+        height: 50vh;
+        width: 80%;
+    }
+
+    #misionYvision {
+        flex-direction: column;
+        padding: 10vh 4vw;
+    }
+
+    #misionYvision h1 {
+        font-size: 2.5rem;
+    }
+
+    #misionYvision p {
+        font-size: 1rem;
+        width: 78%;
+    }
+
+    .cont-valores {
+        align-items: center;
+        padding: auto;
+    }
+
+    .valor span {
+        font-size: 1rem;
+        color: #3a3a3a;
+    }
+
+    .valor #icono {
+        font-size: 2rem
+    }
+
+    .cont-valores .valores {
+        flex-direction: column;
+    }
+
+    footer .contenedor {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    footer .img {
+        width: 60vw;
+    }
+
+    footer img {
+        width: 60vw;
+    }
+
+    footer .pf {
+        width: 80%;
+        margin: 0;
+    }
+
+    footer .empresa {
+        width: 80%;
+        margin-bottom: 3vh;
+    }
+}
+
+/* Ubicacanos*/
+.ubicacion {
+    margin: auto;
+    margin-top: 12vh;
+}
+
+.ubicacion p {
+    margin: auto;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    color: black;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    width: 80vw;
+    height: 80vh;
+    border: 0;
+}
+
+/* Contacto */
+.contacto {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto form {
+    background: #f4f4f4;
+    padding: 2vw;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.contacto .formulario {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.contacto h1 {
+    margin: auto;
+}
+
+.contacto .grupo {
+    position: relative;
+    margin: 4vh 5vw;
+}
+
+.contacto input {
+    background: none;
+    color: #3a3a3a;
+    padding: 1rem 1rem 1rem 0.5rem;
+    display: block;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.contacto input:focus {
+    outline: none;
+    color: #949494
+}
+
+.contacto label {
+    color: #3a3a3a;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease-in-out all;
+    pointer-events: none;
+}
+
+.contacto input:focus~label, input:valid~label {
+    top: -14px;
+    color: #208cf2;
+    font-size: 1.05rem;
+}
+
+.contacto .barra {
+    position: relative;
+    display: block;
+    width: 105%;
+}
+
+.contacto .barra::before {
+    content: "";
+    height: 3px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    transition: 0.3s ease-in-out width;
+    left: 0;
+}
+
+.contacto input:focus~.barra::before {
+    width: 100%;
+}
+
+.contacto button {
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    color: #fff;
+    padding: 1rem 6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    transition: 0.2s ease-in-out all;
+}
+
+.espacio-barra {
+    height: 7rem;
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+}

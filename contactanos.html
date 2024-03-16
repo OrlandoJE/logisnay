@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LOGISNAY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Recursos/Imagenes/LOGISNAY.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Outfit:wght@400;500;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <a href="index.html"><img src="Recursos/Imagenes/Logisnay.svg"></a>
+            
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Servicios</li>
+                <li><a href="encuentranos.html">Encuéntranos</li>
+                <li><a href="contactanos.html" class="boton-contactanos">Contáctanos</a></li>
+            </ul>
+
+            <div class="barras-menu"><i class="fas fa-bars"></i></div>
+
+        </nav>
+
+        <div class="hr"></div>
+    </header>
+
+    <div class="menuDesplegable">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="">Servicios</a></li>
+            <li><a href="encuentranos.html">Encuéntranos</a></li>
+            <li><a href="contactanos.html" class="boton-contactanos">Contáctanos</a></li>
+        </ul>
+    </div>
+    <div class="espacio-barra"></div>
+    
+    <div class="contacto">
+        <form action="contactanos.html" id="formulario">
+            <div class="formulario">
+                <h1>Comunícate con nosotros</h1>
+                <div class="grupo">
+                    <input type="text" name="" id="name" required autocomplete="off">
+                    <span class="barra"></span>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="grupo">
+                    <input type="text" name="" id="lastName" required autocomplete="off">
+                    <span class="barra"></span>
+                    <label for="">Apellido</label>
+                </div>
+                <div class="grupo">
+                    <input type="tel" name="" id="phone" required autocomplete="off">
+                    <span class="barra"></span>
+                    <label for="">Número Telefónico</label>
+                </div>
+                <div class="grupo">
+                    <input type="email" name="" id="email" required autocomplete="off">
+                    <span class="barra"></span>
+                    <label for="">Correo Electrónico</label>
+                </div>
+                <div class="grupo">
+                    <input type="text" name="" id="matter" required autocomplete="off">
+                    <span class="barra"></span>
+                    <label for="">Asunto</label>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <hr>
+        <div class="contenedor">
+            <div class="img"><img src="Recursos/Imagenes/LOGISNAY.png" alt=""></div>
+            <div class="pf">
+                <h2>Preguntas Frecuentes</h2>
+                <ul>
+                    <li>
+                        <div class="pregunta">
+                            <h4>¿Cómo puedo cotizar?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        
+                        <div class="respuesta">Puedes cotizar nuestros servicios visitando nuestra página web y utilizando el botón de contáctanos. Simplemente llena el formulario y recibirás un correo con una cotización personalizada de acuerdo a tus necesidades.</div>
+                    </li>
+                    <li>
+                        <div class="pregunta">
+                            <h4>¿Cómo puedo rastrear mi pedido?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        
+                        <div class="respuesta">Luego de realizar tu pedido, te enviaremos un correo electrónico con el número de seguimiento. Simplemente contáctanos y proporciona el número asignado.</div>
+                    </li>
+                    <li>
+                        <div class="pregunta">
+                            <h4>¿Cómo puedo saber si mi pedido ya llegó?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        
+                        <div class="respuesta">Te notificaremos por correo electrónico cuando tu pedido llegue a su destino.</div>
+                    </li>
+            </div>
+            <div class="empresa">
+                <h2>Logisnay S.A de C.V</h2>
+                <h3>Contacto</h3>
+                GERENCIA TRANSPORTE NACIONAL: <br>3111370556<br><hr>
+                GERENCIA TRANSPORTE INTERNACIONAL: <br>3111193735<br><hr>
+                GERENTE ADMINISTRATIVO: <br>3111228940<br><hr>
+                GERENCIA GENERAL: <br>3111367799
+                <h3>Oficinas</h3>
+                Privada Valdivia #75 Colonia Santa Teresita C.P 63084. Tepic, Nayarit.
+            </div>
+        </div>
+        <hr>
+        <div class="copy">&copy; 2023 Logisnay S.A de C.V.</div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
