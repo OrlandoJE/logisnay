@@ -277,6 +277,11 @@ header li {
 #agenda ul img {
     width: 6vw;
     height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+#agenda ul img:hover {
+    width: 7.5vw;
 }
 
 #agenda a {
@@ -293,6 +298,7 @@ header li {
     margin: auto;
     padding: 15vh 15vw;
     background-color: #f4f4f4;
+    column-gap: 5vw;
 }
 
 #misionYvision h1 {
@@ -311,14 +317,14 @@ header li {
     align-items: center;
 }
 
-.cont-valores {
+.contValores {
     display: flex;
     flex-direction: column;
     margin: auto;
     padding: 0 20vw;
 }
 
-.cont-valores .valores {
+.contValores .valores {
     display: flex;
     justify-content: space-around;
 }
@@ -501,6 +507,7 @@ footer .copy {
     header {
         height: 10vh;
         width: 100%;
+        background-color: #fff;
     }
 
     header ul {
@@ -549,6 +556,7 @@ footer .copy {
     #misionYvision {
         flex-direction: column;
         padding: 10vh 4vw;
+        row-gap: 8vh;
     }
 
     #misionYvision h1 {
@@ -560,7 +568,7 @@ footer .copy {
         width: 78%;
     }
 
-    .cont-valores {
+    .contValores {
         align-items: center;
         padding: auto;
     }
@@ -574,7 +582,7 @@ footer .copy {
         font-size: 2rem
     }
 
-    .cont-valores .valores {
+    .contValores .valores {
         flex-direction: column;
     }
 
@@ -632,6 +640,9 @@ footer .copy {
     }
 
     #agenda ul img {
+        width: 25vw;
+    }
+    #agenda ul img:hover {
         width: 25vw;
     }
 
@@ -758,7 +769,7 @@ footer .copy {
     transition: 0.2s ease-in-out all;
 }
 
-.espacio-barra {
+.espacioBarra {
     height: 7rem;
     background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
 }
