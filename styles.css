@@ -89,7 +89,7 @@ a {
     transition: all 0.3s ease;
 }
 
-.navbar a:hover {
+a:hover {
     color: #208cf2;
 }
 
@@ -106,7 +106,7 @@ header li {
     margin-left: 2.7vw;
 }
 
-.boton-contactanos {
+.botonContactanos {
     background-color: #0B65BA;
     padding: 10px 20px;
     border-radius: 20px;
@@ -116,11 +116,11 @@ header li {
     border: #0B65BA 2px solid;
 }
 
-.boton-contactanos:hover {
+.botonContactanos:hover {
     background-color: rgba(255, 255, 255, 0);
 }
 
-.barras-menu {
+.barrasMenu {
     display: none;
     cursor: pointer;
     margin-right: 20px;
@@ -144,9 +144,9 @@ header li {
     /* Ensure the menu is on top of other elements */
 }
 
-.menuDesplegable.menu-open {
+.menuDesplegable.menuOpen {
     right: 0;
-    /* Show the menu when menu-open class is applied */
+    /* Show the menu when menuOpen class is applied */
 }
 
 .menuDesplegable ul {
@@ -166,7 +166,7 @@ header li {
     color: #208cf2;
 }
 
-.menuDesplegable .boton-contactanos {
+.menuDesplegable .botonContactanos {
     margin: 0;
     padding: 0;
     border: 0;
@@ -186,7 +186,7 @@ header li {
 .hero {
     background-image: url(Recursos/Imagenes/inicio.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 100svh;
     background-color: rgb(110, 199, 54);
     margin: auto;
     overflow: visible;
@@ -216,7 +216,7 @@ header li {
     color: #ffffff;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     width: 45%;
     height: 100%;
     text-align: right;
@@ -234,7 +234,7 @@ header li {
 
 #agenda {
     background-color: #f4f4f4;
-    padding: 5rem;
+    padding: 8vh 10vw;
 }
 
 #agenda .contenedor {
@@ -244,63 +244,47 @@ header li {
     display: flex;
     justify-content: center;
     column-gap: 2vw;
-    padding: 2rem;
+    padding: 4rem 0;
 }
+
 #agenda img {
-    width: 500px;
-    height: auto%;
-}
-
-/* Quienes Somos */
-#quienesSomos {
-    margin: auto;
-    padding: 10vh 0;
-}
-
-#quienesSomos h1 {
-    margin-bottom: 5vh;
-}
-
-#quienesSomos .contenedor {
-    display: flex;
-    justify-content: center;
-    margin: 0 10vb;
-    column-gap: 5vb;
-}
-
-#quienesSomos .img {
-    width: 25dvw;
-    height: 25dvw;
-    background-color: #0B65BA;
-    border-radius: 40px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-
-#quienesSomos .texto {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-    background-color: #fff;
-    width: 100%;
+    width: 30vw;
     height: auto;
+}
+
+#agenda .texto {
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#agenda ul {
+    list-style: none;
+    display: flex;
+    column-gap: 2vw;
+    padding: 0;
+    justify-content: center;
+}
+
+#agenda li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    color: #fff;
 }
 
-#quienesSomos h2, p {
-    margin: 1% 10%;
-    color: #4067b3;
+#agenda ul img {
+    width: 6vw;
+    height: auto;
 }
 
-#quienesSomos p {
-    margin-bottom: 5%;
-    color: #3a3a3a;
+#agenda a {
+    margin: 5vh auto;
+}
+
+#agenda li a {
+    margin: auto;
 }
 
 /* Misión */
@@ -314,13 +298,10 @@ header li {
 #misionYvision h1 {
     margin: auto;
     text-align: left;
-    ;
-
 }
 
 /* Valores */
 #valores {
-
     padding: 1vh 0;
     margin: auto;
 }
@@ -534,7 +515,7 @@ footer .copy {
         margin: 0
     }
 
-    .barras-menu {
+    .barrasMenu {
         display: block;
     }
 
@@ -557,7 +538,7 @@ footer .copy {
     .hero .frase .texto {
         width: 80%;
         margin: 1vh 3.5vw;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     #quienesSomos .img {
@@ -622,6 +603,38 @@ footer .copy {
         width: 80%;
         margin-bottom: 3vh;
     }
+
+    #agenda .contenedor {
+        flex-direction: column;
+        align-items: center;
+        column-gap: 20vh;
+    }
+
+    #agenda img {
+        width: 60vw;
+    }
+
+    #agenda .texto {
+        width: 60vw;
+        padding: 0 5vw;
+        text-align: center;
+    }
+
+    #agenda ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        row-gap: 5vh;
+    }
+
+    #agenda li {
+        margin: auto;
+    }
+
+    #agenda ul img {
+        width: 25vw;
+    }
+
 }
 
 /* Ubicacanos*/

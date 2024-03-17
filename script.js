@@ -74,10 +74,10 @@ boxes.forEach(box => {
 
 // Menu desplegable //
 document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector(".barras-menu");
-    const menu = document.querySelector(".menu-desplegable");
+    const menuButton = document.querySelector(".barrasMenu");
+    const menu = document.querySelector(".menuDesplegable");
 
     menuButton.addEventListener("click", function () {
-        menu.classList.toggle("menu-open");
+        menu.classList.toggle("menuOpen");
     });
 });
