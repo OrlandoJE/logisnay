@@ -39,17 +39,6 @@ p {
     color: #3a3a3a;
 }
 
-/* Animnaciones del JS */
-.navbar.scroll-shrink {
-    height: 4rem;
-    /* Cambia la altura de la barra de navegación */
-    background-color: #fff;
-}
-
-.hr.scroll-shrink {
-    width: 85%;
-}
-
 * {
     opacity: 0;
     /* Elemento invisible al principio */
@@ -76,7 +65,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    margin: 0px 12%;
+    margin: 0px 10%;
     align-items: center;
     height: 100%;
 }
@@ -126,13 +115,21 @@ header li {
     margin-right: 20px;
 }
 
+.barrasMenu i {
+    transition: 0.3s ease-in-out;
+}
+
+.barrasMenu.active i {
+    transform: rotate(180deg);
+}
+
 /* Menu desplegable */
 .menuDesplegable {
     position: fixed;
-    top: 0rem;
-    right: -80vw;
+    top: 0;
+    right: -100vw;
     /* Initially off-screen */
-    width: 80vw;
+    width: 100vw;
     /* Adjust the width as needed */
     height: 100%;
     background-color: #fff;
@@ -172,6 +169,24 @@ header li {
     border: 0;
     background-color: transparent;
     color: #22377d;
+}
+
+.menuDesplegable .copy {
+    height: 20svh;
+    width: 100%;
+    background-color: #f4f4f4;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Calibri', sans-serif;
+    color: #3a3a3a;
+    text-align: center;
+}
+
+.menuDesplegable .copy span {
+    position: inherit;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
 }
 
 /* Estilo para el botón de cerrar el menú desplegable */
@@ -234,22 +249,20 @@ header li {
 
 #agenda {
     background-color: #f4f4f4;
-    padding: 8vh 10vw;
+    padding: 8vh 8vw;
 }
 
 #agenda .contenedor {
     background-color: #fff;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 0 0 30px 30px;
     display: flex;
-    justify-content: center;
-    column-gap: 2vw;
-    padding: 4rem 0;
+    justify-content: space-around;
+    padding: 5rem 0;
 }
 
 #agenda img {
-    width: 30vw;
-    height: auto;
+    width: 35vw;
 }
 
 #agenda .texto {
@@ -262,7 +275,7 @@ header li {
 #agenda ul {
     list-style: none;
     display: flex;
-    column-gap: 2vw;
+    column-gap: 5vw;
     padding: 0;
     justify-content: center;
 }
@@ -275,7 +288,7 @@ header li {
 }
 
 #agenda ul img {
-    width: 6vw;
+    width: 8vw;
     height: auto;
     transition: 0.3s ease-in-out;
 }
@@ -295,15 +308,17 @@ header li {
 /* Misión */
 #misionYvision {
     display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
     margin: auto;
-    padding: 15vh 15vw;
+    padding: 15vh 23vw;
     background-color: #f4f4f4;
-    column-gap: 5vw;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 #misionYvision h1 {
     margin: auto;
-    text-align: left;
 }
 
 /* Valores */
@@ -432,6 +447,192 @@ footer .copy {
     font-family: 'Calibri', sans-serif;
 }
 
+/* Ubicacanos*/
+#ubicacion {
+    margin: auto;
+    margin-top: 12vh;
+}
+
+#ubicacion p {
+    margin: auto;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    color: black;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    width: 80vw;
+    height: 80vh;
+    border: 0;
+}
+
+/* Contacto */
+#contacto {
+    margin: auto;
+    width: 100%;
+    height: calc(100vh - 7rem);
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacto form {
+    background: #f4f4f4;
+    padding: 2vw;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    width: 30vw;
+}
+
+#contacto .formulario {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#contacto h1 {
+    margin: auto;
+}
+
+#contacto .grupo {
+    position: relative;
+    margin: 4vh 5vw;
+}
+
+#contacto input {
+    background: none;
+    color: #3a3a3a;
+    padding: 1rem 1rem 1rem 0.5rem;
+    display: block;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+#contacto input:focus {
+    outline: none;
+    color: #949494
+}
+
+#contacto label {
+    color: #3a3a3a;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease-in-out all;
+    pointer-events: none;
+}
+
+#contacto input:focus~label, input:valid~label {
+    top: -14px;
+    color: #208cf2;
+    font-size: 1.05rem;
+}
+
+#contacto .barra {
+    position: relative;
+    display: block;
+    width: 105%;
+}
+
+#contacto .barra::before {
+    content: "";
+    height: 3px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    transition: 0.3s ease-in-out width;
+    left: 0;
+}
+
+#contacto input:focus~.barra::before {
+    width: 100%;
+}
+
+#contacto button {
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    color: #fff;
+    padding: 1rem 6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    transition: 0.2s ease-in-out all;
+}
+
+.espacioBarra {
+    height: 7rem;
+    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+}
+
+#servicios {
+    margin-top: 12vh;
+}
+
+.contenedorServicios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin: auto;
+    padding: 5vh 0;
+}
+
+.servicio {
+    width: 300px;
+    height: 350px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 40px;
+    background-color: #f4f4f4;
+    transition: 0.3s ease-in-out;
+    justify-content: space-between;
+}
+
+.servicio ul {
+    padding: 0;
+    list-style: none;
+}
+
+.servicio ul li {
+    margin: 10px 0;
+    position: relative;
+    padding-right: 30px;
+    /* Espacio para la flecha */
+}
+
+.servicio a {
+    display: flex;
+    align-items: center;
+}
+
+.circuloFlecha {
+    stroke: #000;
+    /* Define el color del trazo */
+    stroke-width: 2;
+    /* Define el grosor del trazo */
+    stroke-dasharray: 91;
+    stroke-dashoffset: 91;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.servicio a:hover .circuloFlecha, .servicio a:hover .iconoFlecha {
+    stroke-dashoffset: 0;
+    stroke: #208cf2;
+}
+
 /* Responsive */
 @media screen and (max-width: 1560px) {
     .hero .frase .titulo {
@@ -485,9 +686,13 @@ footer .copy {
         margin: 4vh 0;
     }
 
+    #contacto form {
+        width: 50vw;
+    }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     * {
         font-size: 1rem;
     }
@@ -516,10 +721,6 @@ footer .copy {
 
     nav {
         margin: 0 5dvw;
-    }
-
-    .hr.scroll-shrink {
-        margin: 0
     }
 
     .barrasMenu {
@@ -561,11 +762,13 @@ footer .copy {
 
     #misionYvision h1 {
         font-size: 2.5rem;
+        text-align: left;
     }
 
     #misionYvision p {
         font-size: 1rem;
         width: 78%;
+        text-align: left;
     }
 
     .contValores {
@@ -615,7 +818,6 @@ footer .copy {
     #agenda .contenedor {
         flex-direction: column;
         align-items: center;
-        column-gap: 20vh;
     }
 
     #agenda img {
@@ -642,134 +844,17 @@ footer .copy {
     #agenda ul img {
         width: 25vw;
     }
+
     #agenda ul img:hover {
         width: 25vw;
     }
 
-}
+    #contacto h1 {
+        font-size: 2.3rem;
+    }
 
-/* Ubicacanos*/
-.ubicacion {
-    margin: auto;
-    margin-top: 12vh;
-}
+    #contacto form {
+        width: 85vw;
+    }
 
-.ubicacion p {
-    margin: auto;
-    padding-top: 2vh;
-    padding-bottom: 1vh;
-    text-align: center;
-    color: black;
-}
-
-.mapa {
-    display: flex;
-    justify-content: center;
-}
-
-.mapa iframe {
-    width: 80vw;
-    height: 80vh;
-    border: 0;
-}
-
-/* Contacto */
-.contacto {
-    margin: auto;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contacto form {
-    background: #f4f4f4;
-    padding: 2vw;
-    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-.contacto .formulario {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-
-.contacto h1 {
-    margin: auto;
-}
-
-.contacto .grupo {
-    position: relative;
-    margin: 4vh 5vw;
-}
-
-.contacto input {
-    background: none;
-    color: #3a3a3a;
-    padding: 1rem 1rem 1rem 0.5rem;
-    display: block;
-    width: 90%;
-    border: none;
-    border-bottom: 1px solid #3a3a3a;
-}
-
-.contacto input:focus {
-    outline: none;
-    color: #949494
-}
-
-.contacto label {
-    color: #3a3a3a;
-    position: absolute;
-    left: 5px;
-    top: 10px;
-    transition: 0.2s ease-in-out all;
-    pointer-events: none;
-}
-
-.contacto input:focus~label, input:valid~label {
-    top: -14px;
-    color: #208cf2;
-    font-size: 1.05rem;
-}
-
-.contacto .barra {
-    position: relative;
-    display: block;
-    width: 105%;
-}
-
-.contacto .barra::before {
-    content: "";
-    height: 3px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
-    transition: 0.3s ease-in-out width;
-    left: 0;
-}
-
-.contacto input:focus~.barra::before {
-    width: 100%;
-}
-
-.contacto button {
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
-    color: #fff;
-    padding: 1rem 6rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 1rem auto;
-    font-size: 1.2rem;
-    transition: 0.2s ease-in-out all;
-}
-
-.espacioBarra {
-    height: 7rem;
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
 }

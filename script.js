@@ -1,29 +1,3 @@
-// Para la animacion de la barra de navegacion
-// Obtén la barra de navegación
-const navbar = document.querySelector('.navbar');
-
-// Agrega un evento de desplazamiento para controlar el cambio de tamaño
-window.addEventListener('scroll', () => {
-    // Verifica la posición de desplazamiento
-    if (window.scrollY > 100) { // Cambia 100 a la cantidad de desplazamiento en píxeles en la que deseas que ocurra el cambio
-        navbar.classList.add('scroll-shrink'); // Agrega una clase para reducir el tamaño
-    } else {
-        navbar.classList.remove('scroll-shrink'); // Remueve la clase si el desplazamiento es menor
-    }
-});
-
-const navbarhr = document.querySelector('.hr');
-
-// Agrega un evento de desplazamiento para controlar el cambio de tamaño
-window.addEventListener('scroll', () => {
-    // Verifica la posición de desplazamiento
-    if (window.scrollY > 100) { // Cambia 100 a la cantidad de desplazamiento en píxeles en la que deseas que ocurra el cambio
-        navbarhr.classList.add('scroll-shrink'); // Agrega una clase para reducir el tamaño
-    } else {
-        navbarhr.classList.remove('scroll-shrink'); // Remueve la clase si el desplazamiento es menor
-    }
-});
-
 // Preguntas frecuentes //
 document.addEventListener("DOMContentLoaded", function () {
     const preguntas = document.querySelectorAll(".pregunta");
@@ -78,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".menuDesplegable");
 
     menuButton.addEventListener("click", function () {
+        this.classList.toggle("active");
         menu.classList.toggle("menuOpen");
     });
 });
