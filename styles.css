@@ -526,7 +526,7 @@ footer .copy {
     position: absolute;
     left: 5px;
     top: 10px;
-    transition: 0.2s ease-in-out all;
+    transition: 0.3s ease-in-out all;
     pointer-events: none;
 }
 
