@@ -1,13 +1,28 @@
 /* Archivo General */
+* {
+    opacity: 0;
+    /* Elemento invisible al principio */
+    transition: opacity 0.5s ease-in;
+    /* Transición de opacidad para suavizar la aparición/desaparición */
+    --blueMarine: #22377d;
+    --grey: #3a3a3a;
+    --lightGrey: #949494;
+    --vLightGrey: #f4f4f4;
+    --lightBlue: #208cf2;
+    --blue: #0B65BA;
+    --gradient: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: auto;
-    color: #3a3a3a;
+    color: var(--grey);
 }
 
 hr {
     margin: auto;
-    background-color: #949494;
+    background-color: var(--lightGrey);
     border: none;
     height: 1px;
 
@@ -15,7 +30,7 @@ hr {
 
 .hr {
     margin: auto;
-    background-color: #949494;
+    background-color: var(--lightGrey);
     height: 1px;
     width: 100%;
     transition: 0.5s ease width;
@@ -25,27 +40,18 @@ h1 {
     font-family: 'Outfit', sans-serif;
     font-size: 50px;
     text-align: center;
-    color: #22377d;
+    color: var(--blueMarine);
 }
 
 h2 {
     font-family: 'Outfit', sans-serif;
     font-size: 30px;
-    color: #3a3a3a;
+    color: var(--grey);
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    color: #3a3a3a;
-}
-
-* {
-    opacity: 0;
-    /* Elemento invisible al principio */
-    transition: opacity 0.5s ease-in;
-    /* Transición de opacidad para suavizar la aparición/desaparición */
-    outline: none;
-    /* Elimina el borde al hacer click */
+    color: var(--grey);
 }
 
 /* Barra de navegacion */
@@ -55,7 +61,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 7rem;
+    height: 6rem;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 999;
     transition: 0.3s ease-out;
@@ -72,14 +78,14 @@ nav {
 
 a {
     text-decoration: none;
-    color: #3a3a3a;
+    color: var(--grey);
     font-family: 'Outfit', sans-serif;
     margin: 0;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #208cf2;
+    color: var(--lightBlue);
 }
 
 header img {
@@ -96,13 +102,13 @@ header li {
 }
 
 .botonContactanos {
-    background-color: #0B65BA;
+    background-color: var(--blue);
     padding: 10px 20px;
     border-radius: 20px;
-    color: #fff;
+    color: white;
     font-weight: 700;
     transition: all 0.3s ease;
-    border: #0B65BA 2px solid;
+    border: var(--blue) 2px solid;
 }
 
 .botonContactanos:hover {
@@ -132,7 +138,7 @@ header li {
     width: 100vw;
     /* Adjust the width as needed */
     height: 100%;
-    background-color: #fff;
+    background-color: white;
     /* Background color for the menu */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: right 0.4s ease-in-out;
@@ -160,7 +166,7 @@ header li {
 }
 
 .menuDesplegable a:hover {
-    color: #208cf2;
+    color: var(--lightBlue);
 }
 
 .menuDesplegable .botonContactanos {
@@ -168,17 +174,17 @@ header li {
     padding: 0;
     border: 0;
     background-color: transparent;
-    color: #22377d;
+    color: var(--blueMarine);
 }
 
 .menuDesplegable .copy {
     height: 20svh;
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: var(--vLightGrey);
     position: absolute;
     bottom: 0;
     font-family: 'Calibri', sans-serif;
-    color: #3a3a3a;
+    color: var(--grey);
     text-align: center;
 }
 
@@ -199,18 +205,9 @@ header li {
 
 /* Imagen Inicio */
 .hero {
-    background-image: url(Recursos/Imagenes/inicio.jpg);
     background-size: cover;
     height: 100svh;
-    background-color: rgb(110, 199, 54);
     margin: auto;
-    overflow: visible;
-    position: relative;
-}
-
-.hero a {
-    position: absolute;
-    bottom: 0;
 }
 
 .frase {
@@ -218,7 +215,7 @@ header li {
     bottom: 0;
     margin: auto;
     padding: 3vh 0;
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    background: var(--gradient);
     width: 100%;
     height: auto;
     display: flex;
@@ -228,7 +225,7 @@ header li {
 
 .frase .titulo {
     margin-left: 20%;
-    color: #ffffff;
+    color: white;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 2.4rem;
@@ -239,7 +236,7 @@ header li {
 
 .frase .texto {
     margin-right: 20%;
-    color: #fff;
+    color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
@@ -248,12 +245,12 @@ header li {
 }
 
 #agenda {
-    background-color: #f4f4f4;
+    background-color: var(--vLightGrey);
     padding: 8vh 8vw;
 }
 
 #agenda .contenedor {
-    background-color: #fff;
+    background-color: white;
     margin: auto;
     border-radius: 0 0 30px 30px;
     display: flex;
@@ -312,7 +309,7 @@ header li {
     row-gap: 10vh;
     margin: auto;
     padding: 15vh 23vw;
-    background-color: #f4f4f4;
+    background-color: var(--vLightGrey);
     text-align: center;
     font-size: 1.1rem;
 }
@@ -360,7 +357,7 @@ header li {
 
 .valor span {
     font-size: 1.2rem;
-    color: #3a3a3a;
+    color: var(--grey);
 }
 
 .valor #icono {
@@ -392,7 +389,7 @@ footer .pf {
 
 footer .pf h4 {
     text-decoration: none;
-    color: #3a3a3a;
+    color: var(--grey);
     margin: 0;
 }
 
@@ -403,11 +400,11 @@ footer .pf ul {
 }
 
 footer .pf li {
-    background-color: #f4f4f4;
+    background-color: var(--vLightGrey);
     border-radius: 30px;
     padding: 5% 7%;
     margin: 5% 0;
-    color: #3a3a3a;
+    color: var(--grey);
 }
 
 footer .pf .pregunta {
@@ -477,14 +474,14 @@ footer .copy {
     margin: auto;
     width: 100%;
     height: calc(100vh - 7rem);
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    background: var(--gradient);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #contacto form {
-    background: #f4f4f4;
+    background: var(--vLightGrey);
     padding: 2vw;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
     border-radius: 30px;
@@ -508,21 +505,21 @@ footer .copy {
 
 #contacto input {
     background: none;
-    color: #3a3a3a;
+    color: var(--grey);
     padding: 1rem 1rem 1rem 0.5rem;
     display: block;
     width: 90%;
     border: none;
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid var(--grey);
 }
 
 #contacto input:focus {
     outline: none;
-    color: #949494
+    color: var(--lightGrey)
 }
 
 #contacto label {
-    color: #3a3a3a;
+    color: var(--grey);
     position: absolute;
     left: 5px;
     top: 10px;
@@ -532,7 +529,7 @@ footer .copy {
 
 #contacto input:focus~label, input:valid~label {
     top: -14px;
-    color: #208cf2;
+    color: var(--lightBlue);
     font-size: 1.05rem;
 }
 
@@ -548,7 +545,7 @@ footer .copy {
     width: 0;
     bottom: 0px;
     position: absolute;
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    background: var(--gradient);
     transition: 0.3s ease-in-out width;
     left: 0;
 }
@@ -558,8 +555,8 @@ footer .copy {
 }
 
 #contacto button {
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
-    color: #fff;
+    background: var(--gradient);
+    color: white;
     padding: 1rem 6rem;
     border: none;
     border-radius: 5px;
@@ -571,7 +568,7 @@ footer .copy {
 
 .espacioBarra {
     height: 7rem;
-    background: linear-gradient(90deg, rgba(9, 46, 104, 0.9) 0%, rgba(9, 83, 104, 0.9) 50%);
+    background: var(--gradient);
 }
 
 #servicios {
@@ -596,7 +593,7 @@ footer .copy {
     flex-direction: column;
     text-align: left;
     border-radius: 40px;
-    background-color: #f4f4f4;
+    background-color: var(--vLightGrey);
     transition: 0.3s ease-in-out;
     justify-content: space-between;
 }
@@ -619,7 +616,7 @@ footer .copy {
 }
 
 .circuloFlecha {
-    stroke: #000;
+    stroke: black;
     /* Define el color del trazo */
     stroke-width: 2;
     /* Define el grosor del trazo */
@@ -630,7 +627,7 @@ footer .copy {
 
 .servicio a:hover .circuloFlecha, .servicio a:hover .iconoFlecha {
     stroke-dashoffset: 0;
-    stroke: #208cf2;
+    stroke: var(--lightBlue);
 }
 
 /* Responsive */
@@ -712,7 +709,7 @@ footer .copy {
     header {
         height: 10vh;
         width: 100%;
-        background-color: #fff;
+        background-color: white;
     }
 
     header ul {
@@ -778,7 +775,7 @@ footer .copy {
 
     .valor span {
         font-size: 1rem;
-        color: #3a3a3a;
+        color: var(--grey);
     }
 
     .valor #icono {
