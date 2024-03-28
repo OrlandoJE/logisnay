@@ -79,3 +79,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// En la página de servicios
+document.querySelectorAll('li > a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        var subject = this.querySelector('span').innerText;
+        localStorage.setItem('subject', subject);
+    });
+});
+
+// En la página de contacto
+window.addEventListener('DOMContentLoaded', (event) => {
+    var subject = localStorage.getItem('subject');
+    if (subject) {
+        document.getElementById('asunto').value = subject;
+    }
+});
