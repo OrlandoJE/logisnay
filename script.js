@@ -84,6 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll('li > a').forEach(function(link) {
     link.addEventListener('click', function(e) {
         var subject = this.querySelector('span').innerText;
+        if (subject.includes('Seleccionar ')) {
+            subject = subject.replace('Seleccionar ', '');
+        }
         localStorage.setItem('subject', subject);
     });
 });
@@ -93,5 +96,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var subject = localStorage.getItem('subject');
     if (subject) {
         document.getElementById('asunto').value = subject;
+        localStorage.removeItem('subject');
     }
 });
