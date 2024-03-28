@@ -40,20 +40,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById('formulario').addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var tel = document.getElementById('tel').value;
-    var email = document.getElementById('email').value;
-    var asunto = document.getElementById('asunto').value;
+// Formulario de contacto //
+let contactanosSection = document.querySelector('#contacto');
+if (contactanosSection) {
+    document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    var mailtoLink = 'mailto:fabian.hernandez@logisnay.com?subject=' + encodeURIComponent('Página Web Logisnay') +
-        '&body=' + encodeURIComponent(nombre + ' ' + apellido + '\nTeléfono: ' + tel + '\nCorreo Electrónico: ' + email + '\n\n Asunto del Cliente: \n' + asunto);
+        var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+        var tel = document.getElementById('tel').value;
+        var email = document.getElementById('email').value;
+        var asunto = document.getElementById('asunto').value;
 
-    window.location.href = mailtoLink;
-});
+        var mailtoLink = 'mailto:fabian.hernandez@logisnay.com?subject=' + encodeURIComponent('Página Web Logisnay') +
+            '&body=' + encodeURIComponent('De:\n' + nombre + ' ' + apellido + '\nTeléfono: ' + tel + '\nCorreo Electrónico: ' + email + '\n\n Asunto del Cliente: \n' + asunto);
+
+        window.location.href = mailtoLink;
+    });
+}
 
 // Preguntas frecuentes //
 document.addEventListener("DOMContentLoaded", function () {

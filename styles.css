@@ -527,7 +527,7 @@ footer .copy {
     pointer-events: none;
 }
 
-#contacto input:focus~label, input:valid~label {
+#contacto input:focus~label, #contacto input:valid~label {
     top: -14px;
     color: var(--lightBlue);
     font-size: 1.05rem;
@@ -586,6 +586,7 @@ footer .copy {
 }
 
 .servicio {
+    background-size: cover;
     width: 300px;
     height: 350px;
     padding: 40px 30px;
@@ -596,6 +597,42 @@ footer .copy {
     background-color: var(--vLightGrey);
     transition: 0.3s ease-in-out;
     justify-content: space-between;
+    position: relative;
+}
+
+.servicio::before {
+    content: "";
+    opacity: 0.07;
+    /* Ajusta este valor a la opacidad que desees, entre 0 y 1 */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.contenedorServicios #nacional::before {
+    background-image: url(Recursos/Imagenes/nacional.png);
+}
+
+.contenedorServicios #internacional::before {
+    background-image: url(Recursos/Imagenes/internacional.png);
+}
+
+.contenedorServicios #maritimo::before {
+    background-image: url(Recursos/Imagenes/maritimo.png);
+}
+
+.contenedorServicios #aduanas::before {
+    background-image: url(Recursos/Imagenes/aduanas.png);
+}
+
+.contenedorServicios #almacen::before {
+    background-image: url(Recursos/Imagenes/almacen.png);
+}
+
+.contenedorServicios #proyectoInternacional::before {
+    background-image: url(Recursos/Imagenes/proyectoInternacional.png);
 }
 
 .servicio ul {
